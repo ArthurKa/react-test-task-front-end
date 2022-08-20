@@ -5,13 +5,16 @@
   "scripts": {
     "lint:check": "eslint --ext js,jsx,ts,tsx src",
     "lint:fix": "npm run lint:check -- --fix",
-    "dev": "cross-env BROWSER=none react-scripts start",
-    "build": "react-scripts build",
+    "dev": "dotenv -e .env cross-env BROWSER=none react-scripts start",
+    "build": "dotenv -e .env react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "node -e \"try { require('husky').install(); } catch(e) { if(e.code !== 'MODULE_NOT_FOUND') throw e; }\""
   },
   "dependencies": {
+    "dotenv-cli": "^6.0.0",
+    "graphql": "^16.6.0",
+    "graphql-request": "^4.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1"
