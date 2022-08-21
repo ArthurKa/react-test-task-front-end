@@ -18,7 +18,7 @@ env:
     git reset --hard origin/production;
     node $compare_packages/dependencies_are_different_or_node_modules_not_exists.js . $OLD_PACKAGE_NAME && echo "Reinstalling modules..." && npm ci;
     rm -rf $OLD_PACKAGE_NAME;
-    npm run build && npm run serve && (
+    npm run build && (
       pm2 flush test-front -s;
       pm2 restart test-front -s;
       pm2 reset test-front -s;
