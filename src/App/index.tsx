@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { List, ListProps } from './components';
-import { graphql } from './services';
+import { List, ListProps } from '../components';
+import { graphql } from '../services';
 
 export const App: React.FC = () => {
   const [listData, setListData] = useState<ListProps['data']>([]);
