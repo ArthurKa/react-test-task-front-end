@@ -1,8 +1,8 @@
 // @ts-check
 'use strict';
 
-const fs = require('node:fs');
-const path = require('node:path');
+const fs = require('fs');
+const path = require('path');
 const json5 = require('json5');
 
 module.exports = {
